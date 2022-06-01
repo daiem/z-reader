@@ -3,8 +3,8 @@ import request from '../../../utils/request';
 import { TreeNode, defaultTreeNode } from '../../../explorer/TreeNode';
 import { ReaderDriver as ReaderDriverImplements } from '../../../@types';
 
-const DOMAIN = 'https://www.sobiquge.com';
-const DOMAIN2 = 'https://m.sobiquge.com';
+const DOMAIN = 'https://www.biqudu.net';
+const DOMAIN2 = 'https://m.biqudu.net';
 
 class ReaderDriver implements ReaderDriverImplements {
   public hasChapter() {
@@ -14,7 +14,7 @@ class ReaderDriver implements ReaderDriverImplements {
   public async search(keyword: string): Promise<TreeNode[]> {
     const result: TreeNode[] = [];
     try {
-      const res = await request.send(DOMAIN2 + '/search.php?q=' + encodeURI(keyword));
+      const res = await request.send(DOMAIN2 + '/SearchBook.php?keyword=' + encodeURI(keyword));
       const $ = cheerio.load(res.body);
       $('.result-list .result-item.result-game-item').each(function (i: number, elem: any) {
         const title = $(elem).find('a.result-game-item-title-link span').text();

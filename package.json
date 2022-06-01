@@ -97,7 +97,7 @@
       "activitybar": [
         {
           "id": "treeView",
-          "title": "小说",
+          "title": "Reader",
           "icon": "static/images/icon.svg"
         }
       ]

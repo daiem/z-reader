@@ -4,19 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title></title>
+    <title>reader</title>
     <link rel="stylesheet" href="@./style.css" />
   </head>
 
   <body>
     <div id="app">
       <ul id="contextmenu" style="display: none">
-        <li><a data-cmd-param='{"cmd": "lastChapter"}'>上一章</a></li>
-        <li><a data-cmd-param='{"cmd": "nextChapter"}'>下一章</a></li>
+        <li><a data-cmd-param="{'cmd': 'lastChapter'}">上一章</a></li>
+        <li><a data-cmd-param="{'cmd': 'nextChapter'}">下一章</a></li>
         <li class="divided"></li>
-        <li><a data-cmd-param='{"cmd": "editStyle"}'>样式编辑</a></li>
-        <li><a data-cmd-param='{"cmd": "editHtml"}'>页面编辑</a></li>
-        <li><a data-cmd-param='{"cmd": "goProgress"}'>进度跳转</a></li>
+        <li><a data-cmd-param="{'cmd': 'editStyle'}">样式编辑</a></li>
+        <li><a data-cmd-param="{'cmd': 'editHtml'}">页面编辑</a></li>
+        <li><a data-cmd-param="{'cmd': 'goProgress'}">进度跳转</a></li>
       </ul>
       <div class="content" style="font-size: 16px">{{ content }}</div>
     </div>
